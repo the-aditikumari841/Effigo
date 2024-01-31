@@ -1,9 +1,9 @@
 public class Debugging {
     public static void main(String args[])
     {
-        int exam1Score = 85;
-        int exam2Score = 90;
-        int exam3Score = 95;
+        double exam1Score = 85;
+        double exam2Score = 90;
+        double exam3Score = 95;
 
         int total = 100;
 
