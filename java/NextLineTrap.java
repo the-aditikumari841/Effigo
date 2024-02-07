@@ -1,3 +1,4 @@
+package java;
 import java.util.Scanner;
 public class NextLineTrap {
 
@@ -24,7 +25,7 @@ public class NextLineTrap {
         double coffeePrice = scanner.nextDouble();
         double mealPrice =scanner.nextDouble();
 
-        System.out.println("Prices: Book" + bookPrice + ", Coffee, " + coffeePrice + ", mealPrice" + mealPrice1);
+        System.out.println("Prices: Book" + bookPrice + ", Coffee, " + coffeePrice + ", mealPrice" + mealPrice);
         
         System.out.println("\n Enter a restaurant name:");
         scanner.nextLine();

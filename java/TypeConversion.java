@@ -1,8 +1,8 @@
+package java;
 
 public class TypeConversion {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		int ants = 2000; 
 		int purchasedBlockOfCheese = 1;

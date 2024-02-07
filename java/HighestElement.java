@@ -1,3 +1,5 @@
+package java;
+import java.util.*;
 public class HighestElement 
 {
 
@@ -9,9 +11,9 @@ public class HighestElement
         int number2 = scanner.nextInt();
         int number3 = scanner.nextInt();
 
-        int highest = Integer.MIN_VALUE();
+        int highest = Integer.MIN_VALUE;
 
-        if(number 1 > highest)
+        if(number1 > highest)
             highest = number1;
         else if(number2 > highest)
             highest = number2;
@@ -19,6 +21,7 @@ public class HighestElement
             highest = number3;
 
         System.out.println("Highest = " + highest);
+        scanner.close();
     }
     
 }
