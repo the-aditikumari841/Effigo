@@ -8,7 +8,7 @@
 		<version>3.3.0-M1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.springboot</groupId>
+	<groupId>com.practice.springboot</groupId>
 	<artifactId>learn-spring-boot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>learn-spring-boot</name>
