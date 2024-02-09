@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="employee-management/src/main/java/|JavaProject/src/|employee-management/src/test/java/|learn-spring-boot/src/main/java/|learn-spring-boot/src/test/java/" kind="src" path=""/>
+	<classpathentry kind="src" path="employee-management/src/main/java"/>
+	<classpathentry kind="src" path="employee-management/src/test/java"/>
+	<classpathentry kind="src" path="JavaProject/src"/>
+	<classpathentry kind="src" path="learn-spring-boot/src/main/java"/>
+	<classpathentry kind="src" path="learn-spring-boot/src/test/java"/>
+	<classpathentry kind="output" path="JavaProject/bin"/>
+</classpath>
