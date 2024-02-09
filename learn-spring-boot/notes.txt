@@ -17,3 +17,6 @@ error
 off
 
 
+C:\Users\aditi\Effigo\learn-spring-boot\target\learn-spring-boot-0.0.1-SNAPSHOT.jar
+ 
+ 
