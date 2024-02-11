@@ -2,13 +2,15 @@ package com.developer.employeemanagement.entity;
 
 import java.sql.Date;
 
+import jakarta.persistence.*;
+
 @Entity
 @Table(name = "mt_employee")
 public class EmployeeEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = 1)
+	@Column(name = "emp_id")
 	private long id;
 	private String name;
 	private String gender;
