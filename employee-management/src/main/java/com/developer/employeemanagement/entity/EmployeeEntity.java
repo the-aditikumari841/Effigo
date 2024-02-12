@@ -12,9 +12,17 @@ public class EmployeeEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "emp_id")
 	private long id;
+	
+	@Column(name = "name")
 	private String name;
+	
+	@Column(name = "gender")
 	private String gender;
+	
+	@Column(name = "date_of_birth")
 	private Date dateOfBirth;
+	
+	@Column(name = "address")
 	private String address;
 	
 	public EmployeeEntity()
