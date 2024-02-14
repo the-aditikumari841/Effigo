@@ -5,9 +5,6 @@ import java.util.Optional;
 
 import com.learningportal.learningportalproject.entity.CourseCategoryEntity;
 
-
-
-
 public interface CourseCategoryService {
 	List<CourseCategoryEntity> findAllCourseCategory();
 	Optional<CourseCategoryEntity> findById(String courseCategory);
@@ -15,5 +12,8 @@ public interface CourseCategoryService {
 	CourseCategoryEntity updateCourseCategory(CourseCategoryEntity coursecategoryEntity);
 	void deleteCourseCategory(String courseCategory);
 }
+
+
+
 
 
