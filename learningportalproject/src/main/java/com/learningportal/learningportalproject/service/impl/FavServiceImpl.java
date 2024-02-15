@@ -57,8 +57,3 @@ public class FavServiceImpl implements FavService {
 	
 	
 	
-	
-	
-	
-	
-	
