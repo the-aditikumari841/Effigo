@@ -10,7 +10,7 @@ import com.learningportal.learningportalproject.service.CourseCategoryService;
 
 
 @RestController
-@RequestMapping("/employee")
+@RequestMapping("/coursecategory")
 public class CourseCategoryController {
 	
 	private final CourseCategoryService coursecategoryService;
@@ -25,12 +25,12 @@ public class CourseCategoryController {
 	}
 	
 	@GetMapping("/{id}")
-	public Optional<CourseCategoryEntity> findEmployeeById(@PathVariable("id") String courseCategory){
+	public Optional<CourseCategoryEntity> findCourseCategorybyCategory(@PathVariable("id") String courseCategory){
 		return coursecategoryService.findById(courseCategory);
 	}
 	
 	@PostMapping
-	public CourseCategoryEntity saveEmployee(@RequestBody CourseCategoryEntity coursecategoryEntity) {
+	public CourseCategoryEntity saveCourseCategory(@RequestBody CourseCategoryEntity coursecategoryEntity) {
 		return coursecategoryService.saveCourseCategory(coursecategoryEntity);
 	}
 	
