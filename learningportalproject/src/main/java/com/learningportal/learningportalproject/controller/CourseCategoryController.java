@@ -1,6 +1,7 @@
 package com.learningportal.learningportalproject.controller;
 
 import java.util.List;
+
 import java.util.Optional;
 
 import org.springframework.web.bind.annotation.*;
@@ -26,7 +27,7 @@ public class CourseCategoryController {
 	
 	@GetMapping("/{id}")
 	public Optional<CourseCategoryEntity> findCourseCategorybyCategory(@PathVariable("id") String courseCategory){
-		return coursecategoryService.findById(courseCategory);
+		return coursecategoryService.findByCourseCategory(courseCategory);
 	}
 	
 	@PostMapping
