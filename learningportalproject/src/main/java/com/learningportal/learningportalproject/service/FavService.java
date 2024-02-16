@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import com.learningportal.learningportalproject.entity.FavEntity;
+import com.learningportal.learningportalproject.entity.UserEntity;
 
 
 public interface FavService {
@@ -12,6 +13,8 @@ public interface FavService {
 	FavEntity saveCourseCategory(FavEntity favEntity);
 	FavEntity updateCourseCategory(FavEntity favEntity);
 	void deleteFav(Long id);
+	FavEntity saveFav(FavEntity favEntity);
+	FavEntity updateFav(FavEntity favEntity);
 }
 
 

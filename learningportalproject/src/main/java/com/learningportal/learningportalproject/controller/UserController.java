@@ -10,7 +10,6 @@ import com.learningportal.learningportalproject.service.UserService;
 
 
 
-
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -46,4 +45,5 @@ public class UserController {
 		userService.deleteUser(userID);
 	}
 }
+
 
