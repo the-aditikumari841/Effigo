@@ -9,7 +9,8 @@ import com.learningportal.learningportalproject.entity.FavEntity;
 import com.learningportal.learningportalproject.service.FavService;
 import com.learningportal.learningportalproject.entity.UserEntity;
 import com.learningportal.learningportalproject.service.UserService;
-
+import com.learningportal.learningportalproject.entity.CourseEntity;
+import com.learningportal.learningportalproject.service.CourseService;
 
 
 
@@ -29,8 +30,8 @@ public class FavController {
 	}
 	
 	@GetMapping("/{id}")
-	public Optional<FavEntity> findFavById(@PathVariable("id") Long userID){
-		return favService.findById(userID);
+	public Optional<FavEntity> findFavById(@PathVariable("id") Long courseID){
+		return favService.findById(courseID);
 	}
 	
 	@PostMapping
@@ -44,9 +45,11 @@ public class FavController {
 	}
 	
 	@DeleteMapping("/{id}")
-	public void deleteUser(@PathVariable("id") Long userID) {
-		favService.deleteFav(userID);
+	public void deleteUser(@PathVariable("id") Long courseID) {
+		favService.deleteFav(courseID);
 	}
 }
+
+
 
 

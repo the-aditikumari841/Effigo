@@ -2,6 +2,7 @@ package com.learningportal.learningportalproject.service.impl;
 
 
 import java.util.List;
+
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
@@ -48,6 +49,18 @@ public class FavServiceImpl implements FavService {
 	public void deleteFav(Long id) {
 		// TODO Auto-generated method stub
 		favRepository.deleteById(id);
+	}
+
+	@Override
+	public FavEntity saveFav(FavEntity favEntity) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public FavEntity updateFav(FavEntity favEntity) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }

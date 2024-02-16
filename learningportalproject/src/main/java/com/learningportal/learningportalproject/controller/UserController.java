@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.web.bind.annotation.*;
 import com.learningportal.learningportalproject.entity.UserEntity;
 import com.learningportal.learningportalproject.service.UserService;
-
-
+import java.time.LocalDateTime;
+import org.springframework.format.annotation.DateTimeFormat;
 
 
 @RestController
@@ -30,10 +30,15 @@ public class UserController {
 		return userService.findById(userID);
 	}
 	
-	@PostMapping
-	public UserEntity saveUser(@RequestBody UserEntity userEntity) {
-		return userService.saveUser(userEntity);
-	}
+	
+	 @PostMapping()
+	    public UserEntity saveUser(@RequestBody UserEntity userEntity,
+	    	@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm") LocalDateTime createdOn ,
+	        @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm") LocalDateTime updatedOn) {
+	        // Your logic to create event
+	        return userService.saveUser(userEntity);
+    }
+	
 	
 	@PutMapping
 	public UserEntity updateUser(@RequestBody UserEntity userEntity) {

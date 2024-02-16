@@ -3,7 +3,15 @@ package com.learningportal.learningportalproject.entity;
 import java.sql.Date;
 import jakarta.persistence.*;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import java.time.LocalDateTime;
+
 @Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "user_entity")
 public class UserEntity {
 
@@ -21,6 +29,12 @@ public class UserEntity {
 	@Column(name = "date_of_birth")
 	private Date dateOfBirth;
 	
+	@Column(name = "created_on")
+	private LocalDateTime createdOn;
+	
+	@Column(name = "updated_on")
+	private LocalDateTime updatedOn;
+	
 	@Column(name = "password")
 	private String password;
 	
@@ -28,13 +42,9 @@ public class UserEntity {
 	@JoinColumn(name = "course_id")
 	private CourseEntity course;
 	
-	public UserEntity()
-	{
-		
-	}
+	// user entity - userID , userName , gender , dateOFBirth , password , createdOn , updatedOn
 	
-	// user entity - userID , userName , gender , dateOFBirth , password
-	
+	/*
 	public UserEntity(Long userID, String userName, String gender, Date dateOfBirth , String password ) {
 		this.userID = userID;
 		this.userName = userName;
@@ -81,7 +91,7 @@ public class UserEntity {
 
 	public void setPassword(String password) {
 		this.password = password;
-	}
+	} */
 
 }
 

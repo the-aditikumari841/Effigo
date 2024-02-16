@@ -1,8 +1,17 @@
 package com.learningportal.learningportalproject.entity;
 
+import java.sql.Date;
+
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import java.time.LocalDateTime;
 
 @Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "course_entity")
 public class CourseEntity {
 
@@ -20,6 +29,12 @@ public class CourseEntity {
 	@Column(name = "course_rating")
 	private int courseRating;
 	
+	@Column(name = "created_on")
+	private LocalDateTime createdOn;
+	
+	@Column(name = "updated_on")
+	private LocalDateTime updatedOn;
+	
 	@ManyToOne
 	@JoinColumn(name = "user_id")
 	private UserEntity user;
@@ -32,16 +47,13 @@ public class CourseEntity {
 	@JoinColumn(name = "is_favourite")
 	private FavEntity favorite;
 	
-	public CourseEntity()
-	{
-		
-	}
+	
 	
 	
 	// course entity - courseID , courseName , coursecost, courserating
 	
 	
-	public CourseEntity(Long courseID, String courseName, int courseCost, int courseRating ) {
+	/*public CourseEntity(Long courseID, String courseName, int courseCost, int courseRating ) {
 		this.courseID = courseID;
 		this.courseName = courseName;
 		this.courseCost = courseCost;
@@ -78,7 +90,7 @@ public class CourseEntity {
 
 	public void setcourseRating(int courseRating) {
 		this.courseRating = courseRating;
-	}
+	}*/
 }
 
 
