@@ -1,23 +1,25 @@
 package com.learningportal.learningportalproject.dto.response;
 
 import java.io.Serializable;
+
 import java.util.Date;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import java.time.LocalDateTime;
+
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+
 
 public class CourseCategoryResponse implements Serializable {
 	
 	private String courseCategory ;
 	
-	public CourseCategoryResponse() {
-		
-	}
-	
-	public String getName() {
-		return courseCategory;
-	}
-	
-	public void setName(String courseCategory) {
-		this.courseCategory = courseCategory;
-	}
 
 }
 

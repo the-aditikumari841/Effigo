@@ -26,7 +26,7 @@ public class CourseController {
 	
 	@GetMapping("/{id}")
 	public Optional<CourseEntity> findCoursebyCourseID(@PathVariable("id") Long courseID){
-		return courseService.findById(courseID);
+		return courseService.findByCourseID(courseID);
 	}
 	
 	@PostMapping

@@ -1,6 +1,6 @@
 package com.learningportal.learningportalproject.entity;
 
-import java.sql.Date;
+
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

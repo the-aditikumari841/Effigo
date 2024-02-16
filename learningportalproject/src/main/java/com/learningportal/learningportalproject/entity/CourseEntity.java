@@ -1,6 +1,6 @@
 package com.learningportal.learningportalproject.entity;
 
-import java.sql.Date;
+
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -50,7 +50,7 @@ public class CourseEntity {
 	
 	
 	
-	// course entity - courseID , courseName , coursecost, courserating
+	// course entity - courseID , courseName , coursecost, courserating , updatedOn ,  createdOn
 	
 	
 	/*public CourseEntity(Long courseID, String courseName, int courseCost, int courseRating ) {
