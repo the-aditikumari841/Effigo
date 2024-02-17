@@ -20,6 +20,7 @@ import lombok.NoArgsConstructor;
 
 public class FavRequest implements Serializable {
 	
+	private long favID;
 	private String is_favourite;
 	private LocalDateTime  createdOn;
 	private LocalDateTime updatedOn;

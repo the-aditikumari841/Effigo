@@ -30,8 +30,8 @@ public class FavController {
 	}
 	
 	@GetMapping("/{id}")
-	public Optional<FavEntity> findFavById(@PathVariable("id") Long courseID){
-		return favService.findById(courseID);
+	public Optional<FavEntity> findFavById(@PathVariable("id") Long favID){
+		return favService.findById(favID);
 	}
 	
 	@PostMapping
@@ -45,11 +45,10 @@ public class FavController {
 	}
 	
 	@DeleteMapping("/{id}")
-	public void deleteUser(@PathVariable("id") Long courseID) {
-		favService.deleteFav(courseID);
+	public void deleteUser(@PathVariable("id") Long favID) {
+		favService.deleteFav(favID);
 	}
 }
-
 
 
 
