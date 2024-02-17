@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 
 
 public class CourseCategoryResponse implements Serializable {
-	
+	@Id
 	private String courseCategory ;
 	
 
