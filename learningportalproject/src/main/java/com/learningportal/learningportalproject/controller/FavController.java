@@ -18,7 +18,7 @@ import com.learningportal.learningportalproject.service.CourseService;
 @RequestMapping("/fav")
 public class FavController {
 	
-	private final FavService favService;
+	private FavService favService;
 	
 	public FavController(FavService favService) {
 		this.favService = favService;

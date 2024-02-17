@@ -13,7 +13,7 @@ import com.learningportal.learningportalproject.service.CourseService;
 @RequestMapping("/course")
 public class CourseController {
 	
-	private final CourseService courseService;
+	private CourseService courseService;
 	
 	public CourseController(CourseService courseService) {
 		this.courseService = courseService;

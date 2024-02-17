@@ -1,27 +1,31 @@
 package com.learningportal.learningportalproject.dto.response;
 
 import java.io.Serializable;
+
 import java.util.Date;
+
+
+import jakarta.persistence.Entity;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+
+
+
+
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+
+
 
 public class FavResponse implements Serializable {
 	
-	private String is_favourite;
+	private String fav_ID;
 	
-	public FavResponse() {
-		
-	}
-	
-	public String getIsFav() {
-		return is_favourite;
-	}
-	
-	public void setIsFav(String isFav) {
-		if(isFav.equalsIgnoreCase("true") || isFav.equalsIgnoreCase("false"))
-			this.is_favourite = is_favourite;
-		else
-			this.is_favourite = is_favourite;
 
-	}
 
 }
 

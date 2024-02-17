@@ -16,6 +16,9 @@ import java.time.LocalDateTime;
 public class FavEntity {
 
 	@Id
+	@Column(name = "fav_id")
+	private long favID;
+	
 	@Column(name = "is_favourite")
 	private String is_favourite;
 	

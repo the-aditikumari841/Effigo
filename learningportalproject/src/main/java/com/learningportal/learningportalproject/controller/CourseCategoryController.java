@@ -14,7 +14,7 @@ import com.learningportal.learningportalproject.service.CourseCategoryService;
 @RequestMapping("/coursecategory")
 public class CourseCategoryController {
 	
-	private final CourseCategoryService coursecategoryService;
+	private CourseCategoryService coursecategoryService;
 	
 	public CourseCategoryController(CourseCategoryService coursecategoryService) {
 		this.coursecategoryService = coursecategoryService;

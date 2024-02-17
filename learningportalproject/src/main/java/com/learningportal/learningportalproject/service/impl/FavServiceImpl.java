@@ -28,9 +28,9 @@ public class FavServiceImpl implements FavService {
 	}
 
 	@Override
-	public Optional<FavEntity> findById(Long id) {
+	public Optional<FavEntity> findById(Long favID) {
 		// TODO Auto-generated method stub
-		return favRepository.findById(id);
+		return favRepository.findById(favID);
 	}
 
 	@Override
@@ -46,9 +46,9 @@ public class FavServiceImpl implements FavService {
 	}
 
 	@Override
-	public void deleteFav(Long id) {
+	public void deleteFav(Long favID) {
 		// TODO Auto-generated method stub
-		favRepository.deleteById(id);
+		favRepository.deleteById(favID);
 	}
 
 	@Override
