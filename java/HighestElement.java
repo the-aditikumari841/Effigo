@@ -13,12 +13,12 @@ public class HighestElement
 
         int highest = Integer.MIN_VALUE;
 
-        if(number1 > highest)
-            highest = number1;
-        else if(number2 > highest)
-            highest = number2;
-        else
-            highest = number3;
+        if (number1 > highest)
+			highest = number1;
+		if (number2 > highest)
+			highest = number2;
+		if (number3 > highest)
+			highest = number3;
 
         System.out.println("Highest = " + highest);
         scanner.close();
