@@ -25,7 +25,7 @@ public class UserRequest implements Serializable {
 	private LocalDateTime createdOn;
 	private LocalDateTime updatedOn;
     
-	// user entity - userID , userName , gender , dateOFBirth , password , createdOn , updatedOn
+
     
 
 }

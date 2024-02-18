@@ -24,7 +24,7 @@ public class CourseRequest implements Serializable {
 	private LocalDateTime createdOn;
 	private LocalDateTime updatedOn;
     
-	// course entity - courseID , courseName , coursecost, courserating , updatedOn ,  createdOn
+
 	
 	
 

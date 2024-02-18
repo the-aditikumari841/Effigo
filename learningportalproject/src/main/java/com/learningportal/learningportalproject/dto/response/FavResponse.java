@@ -20,15 +20,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 
-
-
 public class FavResponse implements Serializable {
 	@Id
 	private String fav_ID;
-	
-
 
 }
 
-// fav entity - fav ( true / false ) 
 

@@ -11,9 +11,10 @@ import com.learningportal.learningportalproject.entity.CourseCategoryEntity;
 @Repository
 public interface CourseCategoryRepository extends JpaRepository<CourseCategoryEntity, Long> {
 
+	void deleteByCourseCategory(String courseCategory);
+
 	Optional<CourseCategoryEntity> findByCourseCategory(String courseCategory);
 
-	void deleteByCourseCategory(String courseCategory);
 
 
 

@@ -24,11 +24,10 @@ public class FavRequest implements Serializable {
 	@Id
 	private long favID;
 	
-	private String is_favourite;
 	private LocalDateTime  createdOn;
 	private LocalDateTime updatedOn;
     
-	// fav entity - fav ( true / false ) 
+
     
 
 }

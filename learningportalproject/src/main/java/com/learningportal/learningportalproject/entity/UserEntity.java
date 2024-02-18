@@ -42,56 +42,6 @@ public class UserEntity {
 	@JoinColumn(name = "course_id")
 	private CourseEntity course;
 	
-	// user entity - userID , userName , gender , dateOFBirth , password , createdOn , updatedOn
-	
-	/*
-	public UserEntity(Long userID, String userName, String gender, Date dateOfBirth , String password ) {
-		this.userID = userID;
-		this.userName = userName;
-		this.gender = gender;
-		this.dateOfBirth = dateOfBirth ;
-		this.password = password ;
-	}
-
-	public long getuserID() {
-		return userID;
-	}
-
-	public void setuserID(long userID) {
-		this.userID = userID;
-	}
-
-	public String getUserName() {
-		return userName;
-	}
-
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-
-	public String getGender() {
-		return gender;
-	}
-
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
-
-	public Date getDateOfBirth() {
-		return dateOfBirth;
-	}
-
-	public void setDateOfBirth(Date dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
-	}
-	
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	} */
 
 }
 

@@ -24,7 +24,7 @@ public class CourseCategoryRequest implements Serializable {
 	private LocalDateTime createdOn;
 	private LocalDateTime updatedOn;
 	
-	// category entity - courseCategory , createdOn , updatedOn
+
 	
 }
 

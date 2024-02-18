@@ -16,7 +16,6 @@ public class CourseCategoryServiceImpl implements CourseCategoryService {
 	private CourseCategoryRepository coursecategoryRepository;
 	
 
-
 	@Override
 	public List<CourseCategoryEntity> findAllCourseCategory() {
 		// TODO Auto-generated method stub

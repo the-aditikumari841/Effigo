@@ -19,9 +19,6 @@ public class FavEntity {
 	@Column(name = "fav_id")
 	private long favID;
 	
-	@Column(name = "is_favourite")
-	private String is_favourite;
-	
 	@Column(name = "created_on")
 	private LocalDateTime  createdOn;
 	
@@ -32,24 +29,12 @@ public class FavEntity {
 	@JoinColumn(name = "course_id")
 	private CourseEntity course;
 	
+	@OneToOne
+	@JoinColumn(name = "user_id")
+	private UserEntity user;
 	
-	// fav entity - fav ( true / false ) 
 	
-	/*
-	public FavEntity( String is_favourite ) {
-		this.is_favourite = is_favourite;
-	}
-
-	public String getIsFavourite() {
-		return is_favourite;
-	}
-
-	public void setIsFavourite(String is_favourite) {
-		if( ( is_favourite.equalsIgnoreCase("true") ) || ( is_favourite.equalsIgnoreCase("false") ) )
-			this.is_favourite = is_favourite;
-		else
-			this.is_favourite = "false";
-	} */	
+	
 }
 
 
