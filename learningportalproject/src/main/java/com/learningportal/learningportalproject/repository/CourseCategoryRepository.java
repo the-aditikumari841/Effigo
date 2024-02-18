@@ -7,15 +7,11 @@ import org.springframework.stereotype.Repository;
 
 import com.learningportal.learningportalproject.entity.CourseCategoryEntity;
 
-
 @Repository
-public interface CourseCategoryRepository extends JpaRepository<CourseCategoryEntity, Long> {
+public interface CourseCategoryRepository extends JpaRepository<CourseCategoryEntity, String> {
 
 	void deleteByCourseCategory(String courseCategory);
 
 	Optional<CourseCategoryEntity> findByCourseCategory(String courseCategory);
-
-
-
 
 }
