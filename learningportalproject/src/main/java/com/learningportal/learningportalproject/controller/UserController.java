@@ -37,13 +37,33 @@ public class UserController {
 
 	@PostMapping()
 	public UserEntity saveUser(@RequestBody UserEntity userEntity) {
-		//@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm") LocalDateTime createdOn ,
-		//@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm") LocalDateTime updatedOn) {
-		// Your logic to create event
 		return userService.saveUser(userEntity);
 	}
 
-	@PutMapping
+	/*public UserEntity updateUser(Long userId, String newUsername, String newGender, Date newDateOfBirth) {
+		CrudRepository<UserEntity, Long> userRepository;
+		Optional<UserEntity> optionalUser = userRepository.findById(userId);
+		if (optionalUser.isPresent()) {
+			UserEntity user = optionalUser.get();
+			if (newUsername != null) {
+				user.setUserName(newUsername);
+			}
+			if (newGender != null) {
+				user.setGender(newGender);
+			}
+			if (newDateOfBirth != null) {
+				user.setDateOfBirth(newDateOfBirth);
+			}
+			user.setUpdatedOn(Timestamp.from(Instant.now()));
+			return userRepository.save(user);
+		} else {
+			// Handle case where user with given ID is not found
+			throw new NotFoundException("User not found with ID: " + userId);
+		}
+	}
+	*/
+
+	@PutMapping()
 	public UserEntity updateUser(@RequestBody UserEntity userEntity) {
 		return userService.updateUser(userEntity);
 	}
