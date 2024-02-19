@@ -1,6 +1,7 @@
 package com.learningportal.learningportalproject.service.impl;
 
-import java.time.LocalDateTime;
+import java.sql.Timestamp;
+import java.time.Instant;
 import java.util.List;
 import java.util.Optional;
 
@@ -25,13 +26,13 @@ public class UserServiceImpl implements UserService {
 	}
 
 	public UserEntity saveUser(UserEntity user) {
-		user.setCreatedOn(LocalDateTime.now());
-		user.setUpdatedOn(LocalDateTime.now());
+		user.setCreatedOn(Timestamp.from(Instant.now()));
+		user.setUpdatedOn(Timestamp.from(Instant.now()));
 		return userRepository.save(user);
 	}
 
 	public UserEntity updateUser(UserEntity user) {
-		user.setUpdatedOn(LocalDateTime.now());
+		user.setUpdatedOn(Timestamp.from(Instant.now()));
 		return userRepository.save(user);
 	}
 

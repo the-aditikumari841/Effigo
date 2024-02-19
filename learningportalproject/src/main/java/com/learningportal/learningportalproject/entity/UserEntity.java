@@ -1,7 +1,7 @@
 package com.learningportal.learningportalproject.entity;
 
 import java.sql.Date;
-import java.time.LocalDateTime;
+import java.sql.Timestamp;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -38,15 +38,13 @@ public class UserEntity {
 	@Column(name = "date_of_birth")
 	private Date dateOfBirth;
 
-	//@CreationTimestamp
-
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "created_on", nullable = false, updatable = false)
-	private LocalDateTime createdOn;
-	//@UpdateTimestamp
+	private Timestamp createdOn;
+
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "updated_on", updatable = true)
-	private LocalDateTime updatedOn;
+	private Timestamp updatedOn;
 
 	@Column(name = "password")
 	private String password;
@@ -58,10 +56,5 @@ public class UserEntity {
 	@ManyToOne
 	@JoinColumn(name = "fav_id")
 	private FavEntity fav;
-
-	//public void updateTimestamp() {
-	//	this.updatedOn = LocalDateTime.now();
-
-	//}
 
 }
