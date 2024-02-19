@@ -47,11 +47,11 @@ public class CourseEntity {
 	private UserEntity user;
 
 	@ManyToOne
-	@JoinColumn(name = "course_category")
+	@JoinColumn(name = "category")
 	private CourseCategoryEntity category;
 
 	@OneToOne
-	@JoinColumn(name = "is_favourite")
+	@JoinColumn(name = "favourite")
 	private FavEntity favorite;
 
 }

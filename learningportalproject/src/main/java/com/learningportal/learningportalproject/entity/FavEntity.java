@@ -6,6 +6,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -33,7 +34,7 @@ public class FavEntity {
 	@JoinColumn(name = "course_id")
 	private CourseEntity course;
 
-	@OneToOne
+	@ManyToOne
 	@JoinColumn(name = "user_id")
 	private UserEntity user;
 

@@ -1,6 +1,6 @@
 package com.learningportal.learningportalproject.service.impl;
 
-
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -11,45 +11,32 @@ import com.learningportal.learningportalproject.entity.UserEntity;
 import com.learningportal.learningportalproject.repository.UserRepository;
 import com.learningportal.learningportalproject.service.UserService;
 
-
-
-
-
 @Service
 public class UserServiceImpl implements UserService {
 	@Autowired
 	private UserRepository userRepository;
-	
 
-	@Override
 	public List<UserEntity> findAllUser() {
-		// TODO Auto-generated method stub
 		return userRepository.findAll();
 	}
 
-	@Override
 	public Optional<UserEntity> findById(Long userID) {
-		// TODO Auto-generated method stub
 		return userRepository.findById(userID);
 	}
 
-	@Override
-	public UserEntity saveUser(UserEntity userEntity) {
-		// TODO Auto-generated method stub
-		return userRepository.save(userEntity);
+	public UserEntity saveUser(UserEntity user) {
+		user.setCreatedOn(LocalDateTime.now());
+		user.setUpdatedOn(LocalDateTime.now());
+		return userRepository.save(user);
 	}
 
-	@Override
-	public UserEntity updateUser(UserEntity userEntity) {
-		// TODO Auto-generated method stub
-		return userRepository.save(userEntity);
+	public UserEntity updateUser(UserEntity user) {
+		user.setUpdatedOn(LocalDateTime.now());
+		return userRepository.save(user);
 	}
 
-	@Override
 	public void deleteUser(Long userID) {
-		// TODO Auto-generated method stub
 		userRepository.deleteById(userID);
 	}
+
 }
-
-

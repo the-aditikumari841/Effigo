@@ -1,56 +1,42 @@
 package com.learningportal.learningportalproject.service.impl;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.learningportal.learningportalproject.entity.CourseCategoryEntity;
 import com.learningportal.learningportalproject.repository.CourseCategoryRepository;
 import com.learningportal.learningportalproject.service.CourseCategoryService;
 
 @Service
 public class CourseCategoryServiceImpl implements CourseCategoryService {
-	
+
 	@Autowired
 	private CourseCategoryRepository coursecategoryRepository;
-	
 
-	@Override
 	public List<CourseCategoryEntity> findAllCourseCategory() {
-		// TODO Auto-generated method stub
 		return coursecategoryRepository.findAll();
 	}
 
-	@Override
-	public Optional<CourseCategoryEntity> findByCourseCategory(String courseCategory) {
-		// TODO Auto-generated method stub
-		return coursecategoryRepository.findByCourseCategory(courseCategory);
+	public Optional<CourseCategoryEntity> findByCourseCategory(String category) {
+		return coursecategoryRepository.findByCourseCategory(category);
 	}
 
-	@Override
-	public CourseCategoryEntity saveCourseCategory(CourseCategoryEntity coursecategoryEntity) {
-		// TODO Auto-generated method stub
-		return coursecategoryRepository.save(coursecategoryEntity);
+	public CourseCategoryEntity saveCourseCategory(CourseCategoryEntity category) {
+		category.setCreatedOn(LocalDateTime.now());
+		category.setUpdatedOn(LocalDateTime.now());
+		return coursecategoryRepository.save(category);
 	}
 
-	@Override
-	public CourseCategoryEntity updateCourseCategory(CourseCategoryEntity coursecategoryEntity) {
-		// TODO Auto-generated method stub
-		return coursecategoryRepository.save(coursecategoryEntity);
+	public CourseCategoryEntity updateCourseCategory(CourseCategoryEntity category) {
+		return coursecategoryRepository.save(category);
 	}
 
-	@Override
-	public void deleteCourseCategory(String courseCategory) {
-		// TODO Auto-generated method stub
-		coursecategoryRepository.deleteByCourseCategory(courseCategory);
+	public void deleteCourseCategory(String category) {
+		coursecategoryRepository.deleteByCourseCategory(category);
 	}
-	
+
 }
-
-
-
-
-
-
-

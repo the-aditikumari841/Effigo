@@ -11,6 +11,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -36,9 +38,13 @@ public class UserEntity {
 	@Column(name = "date_of_birth")
 	private Date dateOfBirth;
 
-	@Column(name = "created_on", updatable = false)
-	private LocalDateTime createdOn;
+	//@CreationTimestamp
 
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "created_on", nullable = false, updatable = false)
+	private LocalDateTime createdOn;
+	//@UpdateTimestamp
+	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "updated_on", updatable = true)
 	private LocalDateTime updatedOn;
 
@@ -48,5 +54,14 @@ public class UserEntity {
 	@ManyToOne
 	@JoinColumn(name = "course_id")
 	private CourseEntity course;
+
+	@ManyToOne
+	@JoinColumn(name = "fav_id")
+	private FavEntity fav;
+
+	//public void updateTimestamp() {
+	//	this.updatedOn = LocalDateTime.now();
+
+	//}
 
 }
