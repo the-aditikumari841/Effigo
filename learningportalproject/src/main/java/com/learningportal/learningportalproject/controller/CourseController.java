@@ -3,6 +3,7 @@ package com.learningportal.learningportalproject.controller;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,11 +20,8 @@ import com.learningportal.learningportalproject.service.CourseService;
 @RequestMapping("/course")
 public class CourseController {
 
+	@Autowired
 	private CourseService courseService;
-
-	public CourseController(CourseService courseService) {
-		this.courseService = courseService;
-	}
 
 	@GetMapping
 	public List<CourseEntity> findAllCourse() {
