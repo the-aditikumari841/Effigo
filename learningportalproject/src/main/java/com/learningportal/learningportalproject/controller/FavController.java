@@ -1,49 +1,52 @@
 package com.learningportal.learningportalproject.controller;
 
 import java.util.List;
-import java.util.Optional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.learningportal.learningportalproject.entity.FavEntity;
+import com.learningportal.learningportalproject.dto.FavDto;
 import com.learningportal.learningportalproject.service.FavService;
 
 @RestController
 @RequestMapping("/fav")
 public class FavController {
+
 	@Autowired
 	private FavService favService;
 
-	@GetMapping
-	public List<FavEntity> findAllFav() {
-		return favService.findAllFav();
+	private static final Logger log = LoggerFactory.getLogger(FavController.class);
+
+	@GetMapping(value = "/getAllCategories", produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<FavDto> findAllFav() {
+
+		log.info("List of Fav:");
+		List<FavDto> data = favService.findAllFav();
+		return data;
 	}
 
-	@GetMapping("/{id}")
-	public Optional<FavEntity> findFavById(@PathVariable("id") Long favID) {
-		return favService.findById(favID);
+	@GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+	public FavDto findFavById(@PathVariable Long id) {
+		return favService.findById(id);
 	}
 
-	@PostMapping
-	public FavEntity saveFav(@RequestBody FavEntity favEntity) {
-		return favService.saveFav(favEntity);
+	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+	public FavDto saveFav(@RequestBody FavDto favDto) {
+		return favService.saveFav(favDto);
 	}
 
-	@PutMapping
-	public FavEntity updateFav(@RequestBody FavEntity favEntity) {
-		return favService.updateFav(favEntity);
+	@DeleteMapping(value = "/{id}")
+	public void deleteFav(@PathVariable Long id) {
+		favService.deleteFav(id);
 	}
 
-	@DeleteMapping("/{id}")
-	public void deleteUser(@PathVariable("id") Long favID) {
-		favService.deleteFav(favID);
-	}
 }

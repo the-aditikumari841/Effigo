@@ -1,6 +1,6 @@
 package com.learningportal.learningportalproject.entity;
 
-import java.time.LocalDateTime;
+import java.sql.Timestamp;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -37,10 +37,10 @@ public class CourseEntity {
 	private int courseRating;
 
 	@Column(name = "created_on", updatable = false)
-	private LocalDateTime createdOn;
+	private Timestamp createdOn;
 
 	@Column(name = "updated_on", updatable = true)
-	private LocalDateTime updatedOn;
+	private Timestamp updatedOn;
 
 	@ManyToOne
 	@JoinColumn(name = "user_id")

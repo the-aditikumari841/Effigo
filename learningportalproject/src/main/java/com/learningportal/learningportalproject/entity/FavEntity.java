@@ -1,6 +1,6 @@
 package com.learningportal.learningportalproject.entity;
 
-import java.time.LocalDateTime;
+import java.sql.Timestamp;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -25,10 +25,10 @@ public class FavEntity {
 	private long favID;
 
 	@Column(name = "created_on", updatable = false)
-	private LocalDateTime createdOn;
+	private Timestamp createdOn;
 
 	@Column(name = "updated_on", updatable = true)
-	private LocalDateTime updatedOn;
+	private Timestamp updatedOn;
 
 	@OneToOne
 	@JoinColumn(name = "course_id")
