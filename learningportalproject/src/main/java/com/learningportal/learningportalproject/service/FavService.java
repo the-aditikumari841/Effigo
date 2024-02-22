@@ -65,6 +65,3 @@ public class FavService {
 	}
 
 }
-
-//course.setCreatedOn(Timestamp.from(Instant.now()));
-//course.setUpdatedOn(Timestamp.from(Instant.now()));

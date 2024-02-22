@@ -1,17 +1,4 @@
 
-//public class UserMapper {
-//
-//	
-//	
-//	
-//	
-//
-//UserMapper MAPPER = Mappers.getMapper(UserMapper.class);
-//UserEntity fromRequestToEntity(UserRequest userRequest);
-//UserResponse fromEntityToResponse(UserEntity userEntity);
-//	
-//}
-
 package com.learningportal.learningportalproject.mappers;
 
 import java.util.List;
